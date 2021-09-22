@@ -1,0 +1,297 @@
+@import "settings.sass"
+
+.archive_header
+	padding: 50px 0
+	// min-height: 350px
+	width: 100%
+	background-color: $c-white
+	position: relative
+	text-align: center
+	.archive_header__title
+		position: relative
+		z-index: 20
+		color: $c-black
+		font-weight: 900
+		font-size: 50px
+		text-align: center
+	.archive_header__subtitle
+		font-size: 17px
+		color: #7e859e
+
+.archive_main
+	// +skew-bg
+	padding-top: 50px
+	.archive_item
+		display: inline-block
+		width: 100%
+		margin-bottom: 20px
+		text-decoration: none
+		transition: .2s transform
+		position: relative
+		figure
+			background-image: url('../img/no-image.svg')
+			height: 190px
+			background-size: cover
+			background-position: center
+			// background-color: white
+			position: relative
+			&:before
+				content: ''
+				background-color: white
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				transition: .2s opacity
+				opacity: 0
+		img
+			max-width: 100%
+			width: 100%
+			height: 190px
+			object-fit: cover
+			object-position: center
+		h3
+			color: $c-black
+			font-size: 19px
+			font-weight: 700
+		&:hover
+			transform: scale(1.025)
+			h3
+				color: $c1
+			figure:before
+				opacity: .2
+			// img
+				// opacity: .8
+		.archive_item__type
+			position: absolute
+			top: 7px
+			right: 7px
+			background-color: #394e6d
+			color: white
+			font-weight: 500
+			padding: 5px 13px
+			font-size: 14px
+			img
+				height: 190px
+				width: 100%
+				object-fit: cover
+
+.archive_faculty__main
+	.faculty_name
+		color: $c-black
+		font-weight: 700
+		font-size: 28px
+		// margin-bottom: 25px
+		margin-top: 30px
+		margin-bottom: 0
+	// .js-grid-sizer, .faculty_item
+		// width: calc(25% - 30px)
+
+.person_item
+	position: relative
+	width: 100%
+	height: 200px
+	margin-bottom: 10px
+	+custom-hover
+	// transition-delay: z-index .5s
+	.person_item__image
+		img
+			object-fit: cover
+			object-position: center
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+	.title
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: flex
+		align-items: flex-end
+		color: white
+		margin: 0
+		padding: 15px
+		text-decoration: none
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 30%,rgba(0,0,0,0.65) 100%)
+		h3
+			margin: 0
+			font-size: 22px
+			font-weight: 900
+	.employ
+		position: absolute
+		background-color: white
+		padding: 25px
+		width: 100%
+		top: 100%
+		z-index: 10
+		opacity: 0
+		pointer-events: none
+		transform: scale(.9)
+		box-shadow: $shadow
+		transition: transform .2s, opacity .2s
+		will-change: transform, opacity
+		p
+			margin: 0
+			color: $c-text
+			font-size: 15px
+	&:hover
+		// transition-delay: z-index 0
+		z-index: 50
+		.employ
+			opacity: 1
+			pointer-events: auto
+			transform: scale(1)
+	@media(max-width: 576px)
+		height: auto
+		.person_item__image
+			position: relative
+			height: 250px
+			width: 100%
+			margin: 0
+		.title
+			position: relative
+			width: 100%
+			width: 100%
+			transform: translateY(-100%)
+			float: left
+			height: 0
+		.employ
+			position: relative
+			opacity: 1
+			transform: scale(1)
+
+
+	// .faculty_item	
+	// 	background-color: white
+	// 	display: inline-block
+	// 	padding: 25px
+	// 	// margin: 15px
+	// 	vertical-align: top
+	// 	height: calc(100% - 30px)
+	// 	width: 100%
+	// 	// width: 24%
+	// 	margin-bottom: 25px
+	// 	+custom-hover
+	// 	a
+	// 		color: $c-black
+	// 		text-decoration: none
+	// 		&:hover
+	// 			color: $c1
+	// 		h3
+	// 			font-weight: 900
+	// 			font-size: 23px
+	// 	p
+	// 		color: $c-text
+	// 		margin: 0
+	// 	.faculty_item__image
+	// 		margin-bottom: 15px
+	// 		img
+	// 			margin: 0
+	// 			width: 100%
+	// 			height: 150px
+	// 			object-fit: cover
+	// 			object-position: center
+	// 			max-width: 100%
+	// 			// width: 250px
+
+
+
+	// .faculty_item
+	// 	text-decoration: none
+	// 	background-color: white
+	// 	padding: 25px
+	// 	display: inline-block
+	// 	transition: .15s background-color
+	// 	will-change: background-color
+	// 	// margin-bottom: 30px
+	// 	// width: 100%
+	// 	width: 25%
+	// 	.letterbox
+	// 		background-color: white
+	// 	figure
+	// 		position: relative
+	// 		background-color: #e1e4f0
+	// 		text-align: center
+	// 		.btn-mail
+	// 			width: 50px
+	// 			height: 50px
+	// 			background-image: url('../img/icn-mail.svg')
+	// 			background-size: 70%
+	// 			display: inline-block
+	// 			position: absolute
+	// 			top: 10px
+	// 			right: 10px
+	// 			background-color: #e1e4f0
+	// 			background-position: center
+	// 			background-repeat: no-repeat
+	// 			background-size: 17px
+	// 			will-change: transition, opacity, background-color
+	// 			transition: .2s transform, .2s opacity, .2s background-color
+	// 			transform: translateX(25px)
+	// 			opacity: 0
+	// 			z-index: 50
+	// 			&:hover
+	// 				background-color: $c1
+	// 		img
+	// 			max-width: 100%
+	// 			width: 100%
+	// 			height: 180px
+	// 			object-fit: cover
+	// 			object-position: center
+	// 			transition: .2s opacity
+	// 	a
+	// 		text-decoration: none
+	// 	h3
+	// 		font-weight: 600
+	// 		font-size: 20px
+	// 		color: $c-dark
+	// 		font-size: 23px
+	// 		transition: .15s color
+	// 		margin: 0 0 10px 0
+	// 	span
+	// 		color: $c-text
+	// 		margin-bottom: .25rem
+	// 		transition: .15s color
+	// 		font-size: 15px
+	// 		display: inline-block
+	// 		&:last-child
+	// 			margin-bottom: 0
+	// 	&:hover
+	// 		background-color: $c2
+	// 		.letterbox
+	// 			img
+	// 				opacity: .8
+	// 		.btn-mail
+	// 			opacity: 1
+	// 			transform: translateX(0)
+	// 		h3
+	// 			color: white
+	// 		p
+	// 			color: rgba(255, 255, 255, 0.7)
+
+.archive_profile__item
+	h5
+		color: $c-black
+		font-size: 14px
+		margin-bottom: 10px
+	h3
+		color: $c-black
+		margin-bottom: 3px
+
+
+#dropdown-filter-course
+	display: inline-block
+	a.dropdown-toggle
+		color: $c1
+		text-decoration: none
+		font-size: 30px
+		font-weight: 500
+	a.dropdown-item
+		text-decoration: none
+		&.active, &:focus, &:active
+			background-color: $c1
+			color: white

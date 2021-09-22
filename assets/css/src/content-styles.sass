@@ -1,0 +1,87 @@
+
+p:last-child
+	margin-bottom: 0
+img
+	max-width: 100%
+	height: auto
+hr
+	margin: 2rem 0
+// .single_article__style
+h1, h2, h3, h4, h5, h6
+	color: $c-dark
+	font-weight: 900
+	&:not(:first-child)
+		border-top: 1px solid #dddddd
+		padding: 20px 0
+		margin-top: 30px
+p b, p strong
+	color: #566773
+h1:first-child
+	margin-top: 0
+table
+	max-width: 100%
+	width: 100%
+	margin-bottom: 25px
+	td, th
+		padding: 15px
+		border: 1px solid #ddd
+		ul
+			li
+				list-style-type: square
+		ul:last-child
+			margin-bottom: 0
+// p, b
+a
+	border-bottom: 1px solid $c2text
+	color: $c2text
+	text-decoration: none
+	transition: .05s color, .05s border-color
+	&:hover
+		color: $c1
+		border-color: $c1
+
+blockquote
+	border-left: 2px solid #4e6586
+	margin: 0 20px 20px 20px
+	padding: 50px 20px 20px 20px
+	background-image: url('../img/quotes.svg')
+	background-size: 20px
+	background-position: 20px 15px
+	background-repeat: no-repeat
+	font-size: 18px
+	font-weight: 500
+	p:last-child
+		margin-bottom: 0
+	&.blockquote-2
+		background-color: $c1
+		border: 0
+		color: white
+		background-image: none
+		padding: 40px
+		font-size: 17px
+	&.blockquote-3
+		border: 3px solid #e4e4e4
+		font-size: 17px
+		background-image: none
+		position: relative
+		transition: .2s border-color
+		padding: 50px 30px 30px 30px
+		&:before
+			content: ''
+			width: 50px
+			height: 50px
+			background-image: url('../img/quotes-white.svg')
+			background-color: $c1
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 18px
+			display: inline-block
+			position: absolute
+			top: -20px
+			left: 20px
+			transition: .2s transform, .2s background-color
+		&:hover
+			border-color: $c1
+			&:before
+				transform: scale(1.1)
+				background-color: $c1hover

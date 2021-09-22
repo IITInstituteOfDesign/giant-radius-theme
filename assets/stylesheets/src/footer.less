@@ -1,0 +1,74 @@
+footer[role="contentinfo"] {
+  &:extend(.navbar);
+  &:extend(.navbar-default);
+
+  // Fix z-index issues while scrolling on mobile safari
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+
+  border: none;
+  font-size: @font-size-small;
+  color: @gray-light;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  z-index: 1;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: @gray-darker;
+    }
+  }
+
+  .column {
+    .make-md-column(2);
+  }
+
+  .menu {
+    &:extend(.list-unstyled);
+  }
+
+  #follow-us {
+    padding: (@grid-gutter-width / 2);
+
+    @media (min-width: @grid-float-breakpoint) {
+      float: right;
+    }
+
+    .follow-us {
+      line-height: 1em;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    #social-navigation, strong, li {
+      display: inline-block;
+      margin-right: 0.75em;
+      vertical-align: middle;
+    }
+  }
+}
+
+main {
+  background: @body-bg;
+  border-bottom:1px solid @navbar-default-border;
+  position: relative;
+  z-index: 2;
+  // -webkit-margin-bottom-collapse: separate;
+}
+
+html {
+  position: relative;
+  height: 100%;
+
+  body {
+    background: @navbar-default-bg;
+    // margin-bottom: @footer-height + 2 * @grid-gutter-width;
+  }
+}

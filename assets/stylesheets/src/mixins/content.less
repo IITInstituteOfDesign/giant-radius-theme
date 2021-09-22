@@ -1,0 +1,26 @@
+#primary-content {
+  font-size: @font-size-large;
+	line-height: @line-height-base;
+  
+	h1, h2, h3, h4, h5, h6 {
+		border-top: 1px solid @hr-border;
+		margin-top: 2em*@line-height-base;
+		padding: @line-height-computed 0;
+
+		&:first-child {
+			border-top: none;
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+
+  table {
+		&:extend(.table all);
+
+		tfoot, thead {
+			th {
+				background: @table-bg-accent;
+			}
+		}
+	}
+}

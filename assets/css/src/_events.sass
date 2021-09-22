@@ -1,0 +1,150 @@
+@import "settings.sass"
+
+.events_header
+	// padding-top: 140px
+	width: 100%
+	background-color: $c-white
+	// background-color: $c1
+	position: relative
+	padding-top: 20px
+	.events_header__title
+		color: #333243
+		font-weight: 900
+		font-size: 50px
+		margin-bottom: 25px
+		position: relative
+		z-index: 1
+	.main-text
+		display: flex
+		align-items: center
+		padding-bottom: 40px
+		position: relative
+		z-index: 20
+	.main-slider
+		position: relative
+		z-index: 20
+		margin-bottom: 30px
+		.flexslider
+			margin: 0 0 50px 0
+			border: 0
+			background-color: none
+			figure
+				margin: 0
+	.main-img
+		position: relative
+		z-index: 20
+		margin-bottom: 30px
+		min-height: 300px
+		background-color: $c1
+		height: 550px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		.overlay
+			padding: 40px
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			display: flex
+			flex-direction: column
+			// background-color: rgba(0, 0, 0, 0.2)
+			right: 0
+			background: linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 50%)
+			.bottom
+				margin-top: auto
+				h3
+					font-weight: 900
+					color: white
+					font-size: 35px
+					max-width: 50%
+					text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5)
+				h2
+					color: #ffcc6c
+					font-size: 17px
+				.date
+					font-size: 16px
+					color: white
+
+
+		.main-data
+			font-size: 16px
+			margin-bottom: 100px
+			ul
+				// color: white
+				+list-normalize
+				b
+					// color: rgba(0, 0, 0, 0.4)
+					color: $c-black
+				li
+					a
+						// color: white
+						color: #6c6e77
+						text-decoration: none
+						&:before
+							content: ''
+							width: 0px
+							height: 1px
+							display: inline-block
+							background-color: rgba(0, 0, 0, 0.4)
+							vertical-align: 5px
+							padding-right: 0
+							transition: width .25s, padding .25s
+					&:hover
+						a:before
+							width: 15px
+							padding-right: 10px
+		h1
+			color: $c-dark
+			font-weight: 900
+			font-size: 50px
+			text-align: left
+
+
+.events-container
+	position: relative
+	margin-top: 20px
+	// margin-top: -130px
+	// padding-top: 120px
+	// clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%)
+	// background: linear-gradient(to bottom, rgba(225,228,240,1) 20%,rgba(255,255,255,0) 100%)
+	.event-column
+		margin-bottom: 30px
+
+	.event-item	
+		background-color: white
+		display: inline-block
+		padding: 40px
+		height: 100%
+		width: 100%
+		+custom-hover
+		a
+			color: $c-black
+			text-decoration: none
+			&:hover
+				color: $c1
+			h3
+				font-weight: 900
+				font-size: 23px
+		.event-item--image
+			margin-bottom: 15px
+			img
+				max-width: 100%
+
+
+@media (max-width: 992px)
+	.events-header
+		.badge-page
+			.main-img
+				.overlay
+					.bottom
+						h3
+							max-width: 100% 
+							font-size: 25px 
+
+@media (max-width: 768px)
+	.events-header
+		.badge-page
+			.main-img
+				height: 300px

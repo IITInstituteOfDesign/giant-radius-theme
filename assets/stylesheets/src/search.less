@@ -1,0 +1,21 @@
+#search-form {
+	background: white;
+	display: none;
+	padding-top: @line-height-computed;
+	padding-bottom: @line-height-computed;
+	border-bottom: 1px solid @navbar-default-border;
+	position: relative;
+	z-index: 2;
+
+	// Fix z-index issues while scrolling on mobile safari
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+
+	&.active {
+		display: block;
+	}
+}
+
+body.search #search-form {
+	display: block;
+}

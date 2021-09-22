@@ -1,0 +1,259 @@
+@import "settings.sass"
+
+// .single_person__header
+// 	.single_header__title
+// 		position: absolute
+// 		width: 100%
+// 		height: 100%
+// 		display: flex
+// 		align-items: flex-end
+// 		padding: 35px
+// 		color: white
+// 		background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 30%)
+// 	img
+// 		width: 100%
+// 		max-height: 600px
+// 		object-fit: cover
+// 		object-position: center
+
+.template_full_width_header
+	.single_header
+		background-size: cover
+		background-position: center
+		margin-top: -20px
+		padding: 0 0 50px 0
+		position: relative
+		background-color: white
+		.featured_image
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+		.col-flex
+			min-height: 350px
+			display: flex
+		.single_header__title
+			margin: auto
+			color: white
+			text-align: center
+	.single_article
+		margin-top: -50px
+		z-index: 1
+
+	.single_post__slider
+		margin-top: -50px
+		margin-bottom: 20px
+		.flexslider .flex-control-nav li a
+			padding: 0
+
+	@media(max-width: 768px)
+		.single_header
+			.single_header__title
+				font-size: 40px
+
+// .template_full_width_header.template_full_width_header__slategray
+// 	.single_header
+// 		.featured_image
+// 			position: absolute
+// 			top: 0
+// 			left: 0
+// 			width: 100%
+// 			height: 100%
+// 			object-fit: cover
+// 			object-position: center
+// 	.single_header__title
+// 		color: $c1
+
+.template_side_image
+	.featured_image
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+	.single_post__article
+		margin: 0
+	.single_header__title
+		color: $c-title !important
+		font-size: 35px
+	.single_post__slider, .single_header__slider, .flexslider, .flex-viewport, .flex-viewport ul, .flex-viewport li
+		height: 100% !important
+	.flexslider
+		img, figure, .embed-responsive, .embed-responsive iframe, .slider_file
+			height: 100% !important
+			object-fit: cover
+			object-position: center
+	@media (max-width: 992px)
+		.single_post__slider, .single_header__slider, .flexslider, .flex-viewport, .flex-viewport ul, .flex-viewport li
+			height: auto !important
+		.flexslider
+			img, figure, .embed-responsive, .embed-responsive iframe, .slider_file
+				height: auto !important
+
+.template_side_gallery
+	.single_post__article
+		margin-top: 0
+	.single_header__title
+		color: $c-title !important
+		font-size: 35px
+		margin-bottom: 15px
+	ul
+		margin: 0
+		padding: 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		li
+			margin: 0 0 20px 0
+			padding: 0
+			list-style: none
+			width: calc(50% - 10px)
+			padding-bottom: calc(50% - 10px)
+			position: relative
+			.slider_image
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				margin: 0
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+					object-position: center
+			.slider_file
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				margin: 0
+				.file_container
+					text-decoration: none
+					flex-wrap: wrap
+					text-align: center
+				.file_container__icon
+					width: 100%
+					svg
+						margin: 0
+						width: 30px
+						height: 30px
+				.filename
+					display: none
+			.slider_video
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				margin: 0
+				height: 100%
+				.embed-responsive
+					height: 100%
+	@media(max-width: 992px)
+		.single_post__article
+			margin-bottom: 25px
+	@media(max-width: 576px)
+		.slider_file
+			.file_container__icon
+				display: none
+		li
+			width: 100%
+
+.template_side_sticky
+	aside
+		margin: 0
+		height: 100%
+	.sticky-box
+		padding: 40px
+		background-color: white
+		position: sticky
+		top: 110px
+		.title
+			color: $c-title !important
+			font-size: 25px
+			margin-bottom: 15px
+			font-weight: 600
+	.single_header__title
+		margin-bottom: 25px
+		font-weight: 600
+		font-size: 45px
+		color: $c-title
+	.single_header__featured
+		img
+			max-width: 100%
+	@media(max-width: 992px)
+		.sticky-box
+			margin-top: 15px
+
+
+
+.template_full_width_sticky
+	.single_header
+		background-size: cover
+		background-position: center
+		margin-top: -20px
+		padding: 0 0 50px 0
+		position: relative
+		background-color: white
+		.featured_image
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+		.col-flex
+			min-height: 350px
+			display: flex
+		.single_header__title
+			margin: auto
+			color: white
+			text-align: center
+	.single_article
+		margin-top: -50px
+		z-index: 1
+
+	.single_post__slider
+		margin-top: -50px
+		margin-bottom: 20px
+		.flexslider .flex-control-nav li a
+			padding: 0
+	aside
+		margin: 0
+		height: 100%
+	.sticky-box
+		margin-top: -50px
+		z-index: 1
+		padding: 40px
+		background-color: white
+		position: sticky
+		top: 110px
+		.title
+			color: $c-title !important
+			font-size: 25px
+			margin-bottom: 15px
+			font-weight: 600
+	@media(max-width: 992px)
+		.sticky-box
+			margin-top: 15px
+	@media(max-width: 768px)
+		.single_header
+			.single_header__title
+				font-size: 40px
+
+.template_timeline
+	.single_header__title
+		margin-bottom: 25px
+		font-weight: 600
+		font-size: 45px
+		color: $c-title
+	.single_header_content
+		margin-bottom: 25px
+		font-weight: 600
+		font-size: 45px
+		color: $c-title

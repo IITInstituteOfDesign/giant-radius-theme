@@ -1,0 +1,209 @@
+.ninja-forms-error-msg {
+  color: @state-danger-text;
+  margin-bottom: @line-height-computed;
+}
+
+.ninja-forms-form {
+  .field-wrap {
+    &:extend(.form-group all);
+
+    label {
+      .ninja-forms-req-symbol {
+        color: @brand-danger;
+      }
+    }
+
+    .ninja-forms-field {
+      &[type="text"],
+      &[type="email"] {
+        &:extend(.form-control all);
+      }
+    }
+
+    textarea {
+      &:extend(.form-control all);
+      min-height: (3 * @line-height-computed) + (2 * @padding-base-vertical);
+    }
+
+    &.ninja-forms-error {
+      label, .ninja-forms-field-error {
+        color: @state-danger-text;
+      }
+
+      .ninja-forms-field {
+        border-color: @state-danger-text;
+        .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+        &:focus {
+          border-color: @state-danger-text;
+          @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px @state-danger-text;
+          .box-shadow(@shadow);
+        }
+      }
+    }
+
+    &.label-below, &.label-above {
+      margin-bottom: 2*@line-height-computed;
+    }
+
+    &.label-below label {
+      margin-bottom: 0;
+      margin-top: @padding-base-vertical/2;
+    }
+
+    &.label-above label {
+      margin-bottom: @padding-base-vertical/2;
+      margin-top: 0;
+    }
+
+    &.label-left, &.label-right {
+      .make-row();
+
+      > label {
+        .make-md-column(4);
+        padding-top: @padding-base-vertical;
+      }
+
+      > .ninja-forms-field-wrap {
+        .make-md-column(8);
+      }
+
+      .ninja-forms-field-error {
+        .make-md-column(8);
+      }
+    }
+
+    &.label-left {
+      label {
+        padding-right: @grid-gutter-width;
+      }
+
+      .ninja-forms-field-error {
+        .make-md-column-offset(4);
+      }
+    }
+
+    &.label-right label {
+      padding-left: @grid-gutter-width;
+    }
+  }
+
+  .ninja-forms-field-error,
+  .ninja-forms-field-description {
+    &:extend(.help-block all);
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .ninja-forms-required-items {
+    display: none;
+  }
+
+  .list-checkbox-wrap {
+    ul {
+      &:extend(.list-unstyled all);
+      margin-top: @padding-base-vertical;
+
+      label {
+        font-weight: normal;
+        input {
+          margin-right: @padding-base-horizontal;
+        }
+      }
+    }
+
+    &.label-above, &.label-below {
+      ul {
+        .make-row();
+      }
+
+      li {
+        .make-md-column(6);
+      }
+    }
+  }
+
+  hr {
+    clear: both;
+  }
+
+  .submit-wrap {
+    .make-row();
+
+    div[id*="nf_submit"],
+    div[id*="nf_processing"] {
+      // .make-md-column(8);
+      .make-md-column(4);
+    }
+
+    input[type="submit"] {
+      &:extend(.btn all);
+      // &:extend(.btn-block all);
+      &:extend(.btn-success all);
+    }
+  }
+}
+
+.page-template-full-width .ninja-forms-form .form-group {
+  .make-row(2*@grid-gutter-width);
+  .make-md-column(8);
+  .make-md-column-push(2);
+}
+
+.chosen-container {
+  display: block;
+}
+
+#ui-datepicker-div {
+  background: @body-bg;
+  border-radius: @border-radius-base;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+
+  .ui-datepicker-header {
+    padding: @padding-base-vertical @padding-base-horizontal;
+
+    .ui-corner-all {
+      border-bottom: 1px solid;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+
+    .ui-datepicker-prev {
+      float: left;
+    }
+
+    .ui-datepicker-next {
+      float: right;
+    }
+
+    .ui-datepicker-title {
+      font-weight: @headings-font-weight;
+      text-align: center;
+    }
+  }
+
+  th,td {
+    a, span {
+      box-sizing: content-box;
+      display: block;
+      height: @line-height-computed;
+      line-height: @line-height-computed;
+      padding: @padding-base-vertical @padding-base-horizontal;
+      text-align: center;
+      width: @line-height-computed;
+
+      &.ui-state-highlight {
+        background: @table-bg-hover;
+      }
+
+      &.ui-state-active {
+        background: @component-active-bg;
+        color: @component-active-color;
+      }
+    }
+  }
+}

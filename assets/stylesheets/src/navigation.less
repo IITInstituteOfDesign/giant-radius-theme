@@ -1,0 +1,116 @@
+#main-nav {
+  background-color: #fff;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-radius: 0;
+  z-index: 3;
+
+  // Fix z-index issues while scrolling on mobile safari
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+
+  .navbar-brand {
+    color: @text-color;
+    font-size: @font-size-base;
+    font-weight: bold;
+
+    @media (min-width: @grid-float-breakpoint) {
+      margin-top: @line-height-computed;
+    }
+
+    &:hover {
+      color: @text-muted;
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+    br {
+      display: none;
+    }
+  }
+
+  .search-icon .glyphicon {
+    display: none;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar-right {
+
+      .dropdown-menu {
+        left: 0;
+        right: auto;
+
+        > li > a {
+          padding: 3px 15px;
+        }
+      }
+
+      > .menu-item:last-child .dropdown-menu {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .search-icon {
+      a {
+        margin-bottom: 1px;
+
+        .glyphicon {
+          display: inline-block;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-nav {
+
+    	> .menu-item {
+    		display: inline-block;
+        height: 70px;
+        vertical-align: bottom;
+    	}
+
+      .menu-item {
+        float: none;
+
+        a {
+          display: block;
+          height: 100%;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+
+        &.current-menu-item {
+          > a, > a:hover {
+            background: @navbar-inverse-bg;
+            color: white;
+          }
+        }
+
+        &.current-menu-ancestor > a {
+          background: @navbar-inverse-bg;
+          color: white;
+        }
+      }
+
+      &.current-menu-parent > a {
+        background: @navbar-inverse-bg;
+        color: @navbar-inverse-color;
+      }
+    }
+  }
+}
+
+.navbar-nav li a {
+  border-bottom: none;
+}
+
+.dropdown-menu {
+  min-width: 10px;
+}

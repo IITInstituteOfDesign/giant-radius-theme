@@ -1,0 +1,42 @@
+.btn.btn-pill {
+	&:extend(.btn-default all);
+	border-radius: 2*@padding-base-vertical + @line-height-computed;
+}
+
+.btn {
+	padding: @padding-base-vertical 2*@padding-base-horizontal;
+
+	&.btn-default {
+		&, &:visited, &:active, &:hover {
+			color: @btn-default-color;
+		}
+	}
+
+	&.btn-success {
+		border: none;
+		&, &:visited, &:active, &:hover {
+			color: @btn-success-color;
+		}
+	}
+
+	&.btn-info {
+		border: none;
+		&, &:visited, &:active, &:hover {
+			color: @btn-info-color;
+		}
+	}
+
+	&.btn-warning {
+		border: none;
+		&, &:visited, &:active, &:hover {
+			color: @btn-warning-color;
+		}
+	}
+
+	&.btn-danger {
+		border: none;
+		&, &:visited, &:active, &:hover {
+			color: @btn-danger-color;
+		}
+	}
+}

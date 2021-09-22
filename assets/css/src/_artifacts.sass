@@ -1,0 +1,103 @@
+.artifact-list
+	margin-top: 35px
+	ul
+		margin: 0
+		padding: 0
+		li
+			list-style: none
+			margin: 0
+			padding: 0
+	.image, .file, .video, .url
+		a
+			transition: .2s all
+			will-change: transform
+			display: flex
+			align-items: center
+			padding: 15px
+			border: 0
+			color: $c-text
+			figure
+				margin: 0 15px 0 0 
+				img
+					width: 50px
+					height: 50px
+					object-fit: cover
+					object-position: center
+			h6
+				color: $c-title !important
+				font-weight: 600 !important
+				border: 0 !important
+				margin: 0 !important
+				padding: 0 !important
+			&:hover
+				+custom-hover
+
+
+.artifact-slider
+	// overflow: hidden
+	li
+		// position: relative !important
+		*
+			backface-visibility: hidden !important
+	a
+		border: 0 !important
+		&:hover
+			color: transparent !important
+	.file, .url
+		figure
+			min-height: 342px
+			backface-visibility: hidden !important
+			background-size: cover
+			background-position: center
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0
+			height: 100%
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				z-index: 50
+				backface-visibility: hidden !important
+				background-color: rgba(0, 0, 0, .5)
+			.file_container, .url_container
+				position: relative
+				color: white
+				display: flex 
+				align-items: center
+				border: 1px solid rgba(255, 255, 255, .7) !important
+				padding: 25px
+				transition: transform .2s
+				z-index: 50
+				max-width: 80%
+				&:hover
+					transform: scale(1.1)
+				svg
+					fill: white
+					width: 50px
+					height: 50px
+					margin-right: 25px
+				b
+					color: rgba(255, 255, 255, 50) !important
+				h5, h6
+					color: white !important
+					margin: 0
+					padding: 0
+					border: 0
+				h6
+					font-weight: 400
+					margin-top: 5px
+					font-size: 14px
+	.image
+		.image--caption
+			padding: 10px
+			position: absolute
+			top: 20px
+			left: 20px
+			color: white
+			background-color: rgba(57, 78, 109, 0.85)

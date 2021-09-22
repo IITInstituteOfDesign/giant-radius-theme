@@ -1,0 +1,126 @@
+@import "settings.sass"
+
+.list-header
+	font-size: 0
+	.badge-page
+		padding-top: 140px
+		padding-bottom: 100px
+		width: 100%
+		// background-color: $c1
+		background-color: $c-white
+		position: relative
+		.main-text
+			display: flex
+			align-items: center
+			flex-direction: column
+			position: relative
+			z-index: 20
+		h1
+			color: $c-black
+			font-weight: 900
+			font-size: 50px
+			text-align: center
+		.subtitle
+			color: rgba(0, 0, 0, 0.5)
+
+
+.list-container
+	position: relative
+	margin-top: -51px
+	padding-top: 50px
+	padding-bottom: 80px
+	// clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%)
+	// background: linear-gradient(to bottom, rgba(225,228,240,1) 20%,rgba(255,255,255,0) 100%)
+	.item
+		text-decoration: none
+		figure
+			img
+				max-width: 100%
+		h3
+			font-weight: 600
+			font-size: 20px
+			color: $c-black
+			transition: .1s color
+			margin-bottom: 45px
+		&:hover
+			h3
+				color: $c1
+
+
+
+	.faculty-name
+		font-weight: 800
+		margin-bottom: 30px
+		color: $c-dark
+	.item-faculty
+		text-decoration: none
+		background-color: white
+		padding: 25px
+		display: inline-block
+		transition: .15s background-color
+		will-change: background-color
+		margin-bottom: 30px
+		width: 100%
+		figure
+			position: relative
+			background-color: #e1e4f0
+			text-align: center
+			.btn-mail
+				width: 50px
+				height: 50px
+				background-image: url('../img/icn-mail.svg')
+				background-size: 70%
+				display: inline-block
+				position: absolute
+				top: 10px
+				right: 10px
+				background-color: #e1e4f0
+				background-position: center
+				background-repeat: no-repeat
+				background-size: 17px
+				will-change: transition, opacity, background-color
+				transition: .2s transform, .2s opacity, .2s background-color
+				transform: translateX(25px)
+				opacity: 0
+				z-index: 50
+				&:hover
+					background-color: $c1
+			img
+				max-width: 100%
+				width: 100%
+				height: 180px
+				// max-height: 154px
+				object-fit: cover
+				object-position: center
+		a
+			text-decoration: none
+		h3
+			font-weight: 600
+			font-size: 20px
+			// color: $c1
+			color: $c-dark
+			font-size: 23px
+			transition: .15s color
+			margin: 0
+		span
+			color: $c-text
+			margin-bottom: .25rem
+			transition: .15s color
+			font-size: 15px
+			display: inline-block
+			&:last-child
+				margin-bottom: 0
+			// &:nth-child(4)
+			// 	color: #54555a
+			// 	font-size: 12px
+			// 	font-weight: 500
+		&:hover
+			background-color: $c2
+			.btn-mail
+				opacity: 1
+				transform: translateX(0)
+			h3
+				color: white
+			p
+				color: rgba(255, 255, 255, 0.7)
+

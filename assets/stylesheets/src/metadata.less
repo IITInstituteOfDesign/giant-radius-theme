@@ -1,0 +1,30 @@
+.make-columns(@counter) when (@counter > 0) {
+	.make-columns((@counter - 1));
+	.column:first-child:nth-last-child(@{counter}),
+	.column:first-child:nth-last-child(@{counter}) ~ .column {
+		.make-md-column(@grid-columns / @counter);
+	}
+}
+
+.metadata {
+	.make-row();
+	.make-columns(@grid-columns);
+	font-size: @font-size-small;
+
+	.column {
+		// margin: @padding-base-vertical 0;
+	}
+
+	ul {
+		&:extend(.list-unstyled all);
+	}
+
+	a {
+		border: none;
+		word-wrap: break-word;
+
+		&:hover {
+			color: @gray-lightish;
+		}
+	}
+}

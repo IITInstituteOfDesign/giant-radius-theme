@@ -1,0 +1,136 @@
+@import "settings.sass"
+// =skew_bg
+	// position: relative
+	// margin-top: -130px
+	// padding-top: 120px
+	// clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%)
+	// background: linear-gradient(to bottom, rgba(225,228,240,1) 20%,rgba(255,255,255,0) 100%)
+
+
+.single-project
+	// .single_project__header
+
+.single_project__main
+	position: relative
+	margin-top: -130px
+	padding-top: 120px
+	// clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%)
+	// background: linear-gradient(to bottom, rgba(225,228,240,1) 20%,rgba(255,255,255,0) 100%)
+
+
+
+
+.project_template
+	.project_template__header
+		background-size: cover
+		background-position: center
+		margin-top: -20px
+		height: calc(100vh - 200px)
+		min-height: 500px
+		position: relative
+		// &:before
+		// 	content: ''
+		// 	position: absolute
+		// 	bottom: 0
+		// 	left: 0
+		// 	top: 0
+		// 	right: 0
+		// 	// background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%)
+		// 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(50, 52, 56, 0.8) 100%)
+		.header_title
+			font-weight: 900
+			font-size: 3rem
+			color: white
+			padding-left: 40px
+			padding-right: 40px
+		.header_summary
+			color: white
+			font-size: 18px
+			padding-bottom: 90px
+			padding-left: 40px
+			padding-right: 40px
+		.container
+			height: 100%
+			&:before
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				top: -200px
+				right: 0
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(50, 52, 56, 0.8) 100%)
+			.row
+				height: 100%
+				align-items: flex-end
+		.single_header__slider
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			margin: 0
+			background-color: rgba(71, 93, 125, 0.2)
+			figure
+				margin: 0
+			.hero_unit, .slick-list
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				.slick-slide, .slick-track
+					height: 100%
+					.slider_image
+						width: 100%
+						height: 100%
+						&:before
+							content: ''
+							background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+							position: absolute
+							top: 0
+							bottom: 0
+							width: 100%
+							backface-visibility: hidden
+						img
+							width: 100%
+							height: 100%
+							object-fit: cover
+							object-position: center
+						figcaption
+							padding-bottom: 100px
+							max-width: 730px
+							margin: auto
+							left: 0
+							right: 0
+							background: none
+					.slider_video
+						height: 100%
+						.embed-responsive
+							height: 100%
+
+	.project_template__main
+		background: linear-gradient(to top, white 0%,rgba(238,240,245,1) 100%)
+		margin-bottom: -50px
+		padding-bottom: 40px
+		z-index: 50
+		position: relative
+		.single_project__article
+			margin-top: -80px
+	@media(max-width: 768px)
+		.project_template__header
+			height: auto
+			padding-top: 100px
+
+	@media(max-width: 576px)
+		.project_template__header
+			display: flex
+			.container
+				margin-top: auto
+			.header_title
+				font-size: 2rem
+				padding-left: 5px
+				padding-right: 5px
+			.header_summary
+				font-size: 16px
+				padding-left: 5px
+				padding-right: 5px

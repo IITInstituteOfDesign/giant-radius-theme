@@ -1,0 +1,37 @@
+.absolute(@shorthand: 0) {
+  position: absolute;
+  .positioning(@shorthand);
+}
+
+.fixed(@shorthand: 0) {
+  position: fixed;
+  .positioning(@shorthand);
+}
+
+.positioning(@shorthand: 0) when (length(@shorthand) = 1) {
+  top: @shorthand;
+  right: @shorthand;
+  bottom: @shorthand;
+  left: @shorthand;
+}
+
+.positioning(@shorthand: 0) when (length(@shorthand) = 2) {
+  top: extract(@shorthand, 1);
+  right: extract(@shorthand, 2);
+  bottom: extract(@shorthand, 1);
+  left: extract(@shorthand, 2);
+}
+
+.positioning(@shorthand: 0) when (length(@shorthand) = 3) {
+  top: extract(@shorthand, 1);
+  right: extract(@shorthand, 2);
+  bottom: extract(@shorthand, 3);
+  left: extract(@shorthand, 2);
+}
+
+.positioning(@shorthand: 0) when (length(@shorthand) >= 4) {
+  top: extract(@shorthand, 1);
+  right: extract(@shorthand, 2);
+  bottom: extract(@shorthand, 3);
+  left: extract(@shorthand, 4);
+}

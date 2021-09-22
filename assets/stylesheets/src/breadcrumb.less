@@ -1,0 +1,120 @@
+.filters ol.breadcrumb {
+	background: none;
+	font-size: @font-size-h1;
+	font-weight: @headings-font-weight;
+	padding: 0;
+	margin: 0;
+	// height: @line-height-base * @font-size-h1;
+	// line-height: @line-height-base * @font-size-h1;
+
+	li {
+		white-space: nowrap;
+		select { display: none; }
+		&:before {
+			text-align: center;
+			width: 25px;
+			display: inline-block;
+		}
+	}
+
+	select.form-control + .chosen-container {
+		display: inline-block;
+		height: @line-height-base * @font-size-h1;
+		vertical-align: top;
+		width: 100%;
+
+		.chosen-single {
+			background: none;
+			border: none;
+			box-shadow: none;
+			font-size: @font-size-h1;
+			height: @line-height-base * @font-size-h1;
+			line-height: @line-height-base * @font-size-h1;
+			padding-top: 0;
+			padding-left: 0;
+			padding-bottom: 0;
+			position: relative;
+
+			div {
+				.square(20px);
+				top: 50%;
+				margin-top: -12px;
+			}
+		}
+
+		.selectize-input {
+			border: none;
+			font-size: inherit;
+			line-height: inherit;
+			padding: 0 4px 0 0;
+
+			&.input-active {
+				padding-right: 0;
+			}
+
+			&.focus {
+				box-shadow: none;
+			}
+
+			// &:after {
+			// 	margin-top: 0;
+			// }
+
+			.item {
+				vertical-align: top;
+			}
+
+			input {
+				font-size: inherit;
+				position: absolute;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.chosen-drop {
+		border-top-width: 1px solid @input-border;
+		border-radius: @input-border-radius;
+		font-size: @font-size-base;
+		width: auto !important;
+	}
+
+	.chosen-results {
+		max-height: none;
+		overflow: visible;
+	}
+
+	.dropdown {
+		display: inline-block;
+
+		button[data-toggle="dropdown"] {
+			background: none;
+			border: none;
+			padding: 0;
+			outline: none;
+		}
+
+		.caret {
+			color: @text-muted;
+			border-top-width: 6px;
+			border-left-width: 6px;
+			border-right-width: 6px;
+		}
+
+		&.open .caret {
+			border-top: none;
+			border-bottom: 6px dashed;
+		}
+
+		.dropdown-menu {
+			a {
+				border: none;
+			}
+
+			.current-cat a {
+				background: @component-active-bg;
+				color: @component-active-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+#filmstrip {
+  background: white;
+  border-bottom: 1px solid @navbar-default-border;
+  margin-top: -@navbar-margin-bottom;
+  margin-bottom: @navbar-margin-bottom;
+
+  .post {
+    .make-md-column(@grid-columns/2);
+    color: inherit;
+    padding: @grid-gutter-width/2;
+    text-decoration: none;
+
+    &:hover {
+      background: @table-bg-hover;
+    }
+
+    &.empty:hover {
+      background: none;
+    }
+
+    &.active {
+      background: @navbar-inverse-bg;
+      color: white;
+    }
+
+    .media {
+      height: 3 * @line-height-computed;
+    }
+
+    .media-left, .media-right, .media-body {
+      vertical-align: middle;
+    }
+
+    .media-left {
+      height: 3 * @line-height-computed;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}

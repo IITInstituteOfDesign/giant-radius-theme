@@ -1,0 +1,83 @@
+        </div> <!-- row --> 
+     </div>
+   </div>
+ </main>
+ <footer class="main-footer">
+   <div class="bg-badge">
+     <span>Institute of Design</span>
+   </div>
+   <div class="container">
+     <div class="row">
+       <div class="my-col col-lg-4 col-md-5">
+         <div class="id-copy">
+           <figure>
+             <img src="<?php echo get_template_directory_uri() ?>/assets/img/id-logo.svg" alt="Institute of Design">
+           </figure>
+           <p>
+             <span>Illinois Institute of Technology</span>
+             &nbsp;
+             <span>Institute of Design</span>
+             <span>3137 S Federal St, 2nd floor</span>
+             <span>Chicago, IL 60616</span>
+             <span><a href="tel:3125954900">312-595-4900</a></span>
+             &nbsp;
+             <span>Copyright 2018</span>
+           </p>
+         </div>
+         
+       </div>
+       <div class="my-col col-lg-8 col-md-7">
+         <h4 class="footer-title">Join our mailing list</h4>
+         <div class="mail-listing">
+           <?php
+           if (function_exists('es_subbox')) {
+             es_subbox($namefield = "NO", $desc = "", $group = "Public");
+           }
+           ?>
+         </div>
+         <h4 class="footer-title">Follow Us</h4>
+         <div class="follow-us">
+           <?php
+           $facebook = get_field('facebook', 'option');
+           $twitter = get_field('twitter', 'option');
+           $youtube = get_field('youtube', 'option');
+           $linkedin = get_field('linkedin', 'option');
+           $vimeo = get_field('vimeo', 'option');
+           $instagram = get_field('instagram', 'option');
+           $medium = get_field('medium', 'option');
+           $flickr = get_field('flickr', 'option');
+           ?>
+           <?php if (isset($instance['title']) && $instance['title'] != '') {
+             echo "<h2 class='aside-title'>".$instance['title']."</h2>";
+           } ?>
+           <div class="social-btn">
+             <?php if (isset($facebook) && $facebook != '') {
+               echo "<a href='".$facebook."' class='btn-social btn-fb' target='_blank'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1579 128q35 0 60 25t25 60v1366q0 35-25 60t-60 25h-391v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-735q-35 0-60-25t-25-60v-1366q0-35 25-60t60-25h1366z'/></svg></a>";
+             } ?>
+             <?php if (isset($twitter) && $twitter != '') {
+               echo "<a href='".$twitter."' class='btn-social btn-fb' target='_blank'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z'/></svg></a>";
+             } ?>
+             <?php if (isset($linkedin) && $linkedin != '') {
+               echo "<a href='".$linkedin."' class='btn-social btn-fb' target='_blank'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z'/></svg></a>";
+             } ?>
+             <?php if (isset($vimeo) && $vimeo != '') {
+               echo "<a href='".$vimeo."' class='btn-social btn-fb' target='_blank'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1709 518q-10 236-332 651-333 431-562 431-142 0-240-263-44-160-132-482-72-262-157-262-18 0-127 76l-77-98q24-21 108-96.5t130-115.5q156-138 241-146 95-9 153 55.5t81 203.5q44 287 66 373 55 249 120 249 51 0 154-161 101-161 109-246 13-139-109-139-57 0-121 26 120-393 459-382 251 8 236 326z'/></svg></a>";
+             } ?>
+             <?php if (isset($instagram) && $instagram != '') {
+               echo "<a href='".$instagram."' class='btn-social btn-fb' target='_blank'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm138 0q0 164-115 279t-279 115-279-115-115-279 115-279 279-115 279 115 115 279zm108-410q0 38-27 65t-65 27-65-27-27-65 27-65 65-27 65 27 27 65zm-502-220q-7 0-76.5-.5t-105.5 0-96.5 3-103 10-71.5 18.5q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103-3 96.5 0 105.5.5 76.5-.5 76.5 0 105.5 3 96.5 10 103 18.5 71.5q20 50 58 88t88 58q29 11 71.5 18.5t103 10 96.5 3 105.5 0 76.5-.5 76.5.5 105.5 0 96.5-3 103-10 71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103 3-96.5 0-105.5-.5-76.5.5-76.5 0-105.5-3-96.5-10-103-18.5-71.5q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10-96.5-3-105.5 0-76.5.5zm768 630q0 229-5 317-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124t-124-322q-5-88-5-317t5-317q10-208 124-322t322-124q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317z'/></svg></a>";
+             } ?>
+             <?php if (isset($medium) && $medium != '') {
+               echo "<a href='".$medium."' class='btn-social btn-fb' target='_blank'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z' class='st1'/></svg></a>";
+             } ?>
+             <?php if (isset($youtube) && $youtube != '') {
+               echo "<a href='".$youtube."' class='btn-social btn-fb' target='_blank'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'><path d='M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z'/></svg></a>";
+             } ?>
+             <?php if (isset($flickr) && $flickr != '') {
+               echo "<a href='".$flickr."' class='btn-social btn-fb' target='_blank'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1376 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960zm-550 768q0-88-62-150t-150-62-150 62-62 150 62 150 150 62 150-62 62-150zm564 0q0-88-62-150t-150-62-150 62-62 150 62 150 150 62 150-62 62-150z'/></svg></a>";
+             } ?>
+           </div>
+         </div>
+       </div>
+     </div>
+   </footer>
+

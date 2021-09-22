@@ -1,0 +1,30 @@
+#pagination {
+  text-align: center;
+  width: 100%;
+}
+
+.page-numbers {
+  &:extend(.pagination all);
+  &:extend(.pagination-lg all);
+  border-radius: 0 !important;
+  display: inline-block;
+
+  .page-numbers {
+    box-sizing: content-box;
+    height: 1em;
+    line-height: 1em;
+    width: 1em;
+  }
+
+  span.current {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: @pagination-active-color;
+      background-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
+      cursor: default;
+    }
+  }
+}

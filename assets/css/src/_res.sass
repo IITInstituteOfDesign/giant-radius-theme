@@ -1,0 +1,487 @@
+@media (max-width: 1200px)
+	// Home
+	.section-programs
+		article
+			h3
+				font-size: 25px
+				max-width: 160px
+		.badge-apply
+			justify-content: space-between
+			h3
+				font-size: 20px
+		aside
+			.aside-title
+				font-size: 27px
+			p
+				font-size: 17px
+
+	.section-news
+		article
+			h3
+				font-size: 25px
+		aside
+			.aside-title
+				font-size: 27px
+			p
+				font-size: 17px
+
+	.section-events
+		article
+			h3
+				font-size: 25px
+
+	.section-student-life
+		.student-life--content
+			h2
+				font-size: 50px
+			p
+				font-size: 18px
+
+	.section-research
+		article
+			width: 280px
+			height: 280px
+			h3
+				padding: 25px
+				font-size: 21px
+				line-height: 1.1
+		aside
+			h2
+				font-size: 50px
+			p
+				font-size: 18px
+	.section-social
+		.social-instagram
+			.instagram-grid
+				img
+					width: 100px
+					height: 100px
+		aside
+			a
+				width: 45px
+				height: 45px
+	// Footer
+	.main-footer
+		.footer-title
+			font-size: 35px
+		.instagram-grid
+			img
+				width: 90px
+				height: 90px
+	// Home
+	// #home-head
+		// #home-carousel
+			// width: calc(50vw + 137px)
+
+	// Single
+	.program-single--container
+		aside
+			.box-apply, .box
+				padding: 30px
+			.box-apply
+				h2
+					font-size: 27px
+.btn-menu, #home-head #home--carousel--top figure, .menu-nav, .nav-item--apply
+	display: none
+@media (max-width: 998px)
+	// Header
+	#head-nav
+		.home-head--nav
+			nav
+				a.nav-item
+					padding: 0px 15px
+					font-size: 14px
+				.brand
+					font-size: 18px
+					// padding-top: 43px
+
+	// #home-head
+		// #home--carousel
+			// width: calc(50vw + 43px)
+
+
+	// Home
+	.section-programs
+		article
+			flex-wrap: wrap
+			h3
+				width: 100%
+				max-width: 100%
+				margin-bottom: 8px
+
+	.section-events
+		aside
+			.box-incoming
+				padding: 30px
+				h2
+					font-size: 30px
+
+	.section-social
+		.social-btn
+			display: flex
+			justify-content: initial
+			margin-bottom: 50px
+			a
+				margin-right: 5px
+		.social-instagram
+			.instagram-grid
+				a
+					width: calc(20% - 5px)
+					img
+						width: 100%
+
+
+
+	// Footer
+	.main-footer
+		.instagram-grid
+			img
+				width: 62px
+				height: 62px
+				margin-bottom: 7px
+		.id-copy
+			span
+				font-size: 15px
+			img
+				width: 55px
+				height: 55px
+
+
+
+	// Single
+	.program-single--container
+		.box-apply--top
+			display: block
+		aside
+			margin-top: 60px
+			.box-apply
+				display: none
+
+	.program-single--header
+		.badge-page
+			.main-text
+				height: auto
+				min-height: auto
+				padding: 130px 0 60px 0
+			.featured-image
+				img
+					position: relative
+					width: 100%
+					height: auto
+					object-fit: unset
+					object-position: none
+					min-height: auto
+					max-height: none
+	// #home-head
+		// #home-carousel
+			// width: calc(50vw - 23px)
+
+
+
+	.menu-active #head-nav.scroll .home-head--nav .btn-menu span
+		&:nth-child(1)
+			transform: rotate(42deg) translateX(10px) !important
+			margin-left: -12px !important
+		&:nth-child(3)
+			transform: rotate(-45deg) translateX(11px) translateY(-1px) !important
+			margin-left: -12px !important
+	#head-nav
+		.home-head--nav
+			nav 
+				a.nav-item, .custom-header
+					display: none
+			.btn-apply
+				display: none
+			.nav-item--apply
+				background-color: $c2
+			.btn-menu
+				display: inline-flex
+				justify-content: space-around
+				padding: 16px 0
+				align-items: center
+				background-color: $c1
+				color: white
+				width: 50px
+				height: 50px
+				flex-direction: column
+				position: absolute
+				top: 0
+				right: 0
+				transition: .5s background-color, .3s width, .3s height
+				z-index: 200
+				span
+					background-color: white
+					width: 25px
+					height: 3px
+					display: block
+					transition: .5s transform, .5s margin-left, .5s opacity
+					will-change: transform, margin-left, opacity
+			.sub-menu
+				li
+					position: relative
+					// padding-left: 10px
+					margin-left: 20px
+					&:before
+						content: '- '
+						color: rgba(255, 255, 255, .5)
+						position: absolute
+						left: 0
+						top: 0
+						bottom: 0
+						display: flex
+						align-items: center
+						justify-content: center
+					&.menu-item-has-children:before
+						content: none
+					&.divider
+						&:before
+							content: none
+			// .brand
+				// padding-top: 20px !important
+	// Header
+	.menu-active
+		.btn-menu
+			background-color: $c2 !important
+			span:nth-child(1)
+				transform: rotate(45deg) translateX(8px)
+				margin-left: -9px
+			span:nth-child(3)
+				transform: rotate(-45deg) translateX(8px) translateY(-1px)
+				margin-left: -9px
+			span:nth-child(2)
+				opacity: 0
+		.menu-nav
+			transform: translateY(0%)
+			box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.2)
+	.menu-nav
+		overflow-x: auto
+		max-height: 100vh
+		display: block
+		background-color: $c1
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 50px 35px 35px 35px
+		z-index: 150
+		will-change: transform, box-shadow
+		transform: translateY(-100%)
+		transition: .5s transform, .5s box-shadow
+		ul, li
+			padding: 0
+			margin: 0
+			list-style: none
+		a
+			color: white
+			display: block
+			text-decoration: none
+			padding: 10px
+			br
+				display: none
+			&:hover
+				background-color: rgba(0, 0, 0, 0.2)
+@media (max-width: 768px)
+
+	.program-single--header .badge-page
+		padding-top: 80px
+	#home-head
+		// .home-head--back
+		// 	display: none
+		// .container--top
+		// 	.col-left
+		// 		height: auto
+		// 		padding-top: 50px
+		// 	.col-right
+		// 		height: auto
+		// 		padding-left: 15px
+		// 		padding-top: 50px
+		// #home--carousel--top
+		// 	figure
+		// 		display: block
+		// 		margin: 0
+		// 		width: 100%
+		// 		height: 250px
+		// 		background-size: cover
+		// 		background-position: center
+
+	// Home
+	.main-container
+		margin-top: -80px
+		// margin-top: 0
+		clip-path: none
+	.section-programs
+		aside
+			display: block
+			margin-bottom: 50px
+		article
+			h3
+				font-size: 30px
+			p
+				font-size: 16px
+		.box
+			padding: 10px 0 30px 0
+			.box-title
+				font-size: 50px
+				top: -40px
+				left: 30px
+			.article-container
+				padding: 0 30px
+			.badge-apply
+				padding: 20px 30px 0 30px
+				flex-wrap: wrap
+				text-align: center
+				justify-content: center
+				.custom-btn
+					margin-top: 20px
+
+	.section-news
+		aside
+			display: block
+			margin-bottom: 50px
+
+		.box
+			padding: 10px 0 30px 0
+			.box-title
+				font-size: 50px
+				top: -40px
+				left: 30px
+			.article-container
+				padding: 0 30px
+			.badge-apply
+				padding: 20px 30px 0 30px
+				flex-wrap: wrap
+				text-align: center
+				justify-content: center
+				.custom-btn
+					margin-top: 20px
+
+	.section-events
+		margin-top: 20px
+		aside
+			.box-incoming
+				margin-top: 0
+				margin-bottom: 40px
+
+		.box
+			padding: 30px 0 30px 0
+			.box-title
+				font-size: 50px
+				top: -40px
+				left: 30px
+			.article-container
+				padding: 0 30px
+				&.incoming
+					article
+						flex-wrap: nowrap
+			.badge-apply
+				padding: 20px 30px 0 30px
+				flex-wrap: wrap
+				text-align: center
+				justify-content: center
+				.custom-btn
+					margin-top: 20px
+
+	.section-student-life
+		.student-life--content
+			margin-left: 0
+			padding: 0
+			margin-top: -50px
+
+	.section-research
+		article
+			width: calc(100% - 30px)
+
+	.section-social
+		.social-instagram
+			.instagram-grid
+				a
+					width: calc(33% - 5px)
+
+	// Footer
+	.main-footer
+		.twitter-grid
+			margin-bottom: 20px
+		.instagram-grid
+			margin-bottom: 20px
+			img
+				width: calc(25% - 7px)
+				height: 100%
+
+	// Single
+	.program-single--header
+		.badge-page
+			.main-text
+				height: auto
+				min-height: auto
+				padding: 0 0 60px 0
+
+	// Home
+	#home-carousel--top
+		figure
+			width: 100%
+			height: 350px
+			background-size: cover
+			background-position: center
+			margin: 0
+		.custom-carousel--caption
+			margin-left: 0
+
+	// Footer
+	.main-footer
+		.id-copy
+			margin-bottom: 20px
+
+@media (max-width: 576px)
+	.main-container
+		margin-top: 0
+	// Single
+	.program-single--container
+		.box-apply--top
+			padding: 30px
+		.main-box
+			padding: 30px
+		aside
+			.box
+				padding: 30px
+
+	// Faculty
+	.list-container
+		.item-faculty
+			figure
+				img
+					width: 100%
+					height: auto
+					max-height: initial
+
+	// Home
+	.section-events
+		.box
+			.article-container
+				&.incoming
+					article
+						flex-wrap: wrap
+						figure
+							width: 100%
+							margin-bottom: 15px
+							img
+								width: 100%
+								height: 150px
+
+	.section-social
+		.social-instagram
+			padding: 25px !important
+			.box-title
+				font-size: 40px
+				top: -35px
+				left: 22px
+
+
+@media (max-width: 320px)
+	#head-nav
+		.home-head--nav
+			nav
+				.brand
+					.title-big
+						display: none !important
+					.title-sm
+						display: inline-block !important

@@ -1,0 +1,57 @@
+.post-type-archive-course,
+.tax-course_type {
+	.course {
+		border-top: 1px solid @hr-border;
+		border-bottom: none;
+		background: white;
+		color: @text-color;
+		display: block;
+		min-height: 200px;
+		padding-top: @line-height-computed;
+
+		&:hover, &:focus, &:visited {
+			color: inherit;
+		}
+
+		&:hover, &:focus {
+			h3 {
+				text-decoration: underline;
+			}
+		}
+
+		:first-child :first-child {
+			margin-top: 0;
+		}
+
+		.main-content {
+			font-size: @font-size-large;
+		}
+	}
+
+	.course-divider {
+		background: #eee;
+		color: @text-muted;
+		font-weight: @headings-font-weight;
+		padding: @padding-large-vertical @grid-gutter-width/2;
+
+		.pull-right {
+			font-weight: normal;
+		}
+	}
+
+	.course-type {
+		border-top: 3px solid;
+		background: @table-bg-accent;
+		min-height: 200px;
+		padding: 0 @grid-gutter-width/2 @grid-gutter-width/2;
+
+		h2, h4 {
+			line-height: @font-size-h1;
+			margin-top: @line-height-computed;
+		}
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

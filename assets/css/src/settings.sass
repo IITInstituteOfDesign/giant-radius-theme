@@ -1,0 +1,115 @@
+$h: 'Helvetica Neue', 'San Francisco', 'Arial', sans-serif
+// $c1: #ff6c00
+// $c2: #e53935
+// $c1: #2d3d8a -- OLDC
+$c1: #394e6d
+$c1hover: #1d2e40
+// $c1hover: #aab2d4
+// $c1: #05be85
+$c2: #ffcc6c
+// $c2text: #ecbb5f
+$c2text: #efab2b
+// $c2: #ffc75d
+// #35c3ae
+// $c2: #ecbb5f
+// $c2: #faf97b
+$c-black: #333243
+$c-text: #7b8790
+$c-white: #eff0f5
+$c-dark: #111
+$c-title: #333243
+$shadow: 0 5px 20px rgba(174, 175, 179, 0.3)
+// #ffd67b yellow orange
+
+=custom-box
+	position: relative
+	background-color: white
+	padding: 60px 45px 60px 45px
+	margin-top: 50px
+	.box-title
+		z-index: 10
+		// color: $c1
+		color: $c-dark
+		font-size: 55px
+		font-weight: 900
+		position: absolute
+		top: -45px
+		left: 38px
+		
+=btn-base
+	background-color: $c2
+	color: white
+	min-height: 50px
+	padding: 15px 20px
+	font-weight: 500
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	font-size: 14px
+
+=btn-id
+	color: white 
+	border-radius: 0
+	min-height: 50px !important
+	padding: 15px 20px !important
+	font-weight: 500 !important
+	display: inline-flex !important
+	justify-content: center !important
+	align-items: center !important
+	font-size: 14px !important
+	border: 0 !important
+	transition: .3s transform, .3s background-color !important
+	background-color: $c1
+	&:hover
+		transform: scale(1.1)
+		background-color: $c1hover
+
+
+=skew-bg
+	clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%)
+	background: linear-gradient(to bottom, rgba(225,228,240,1) 20%,rgba(255,255,255,0) 100%)
+
+=list-normalize
+	margin: 0
+	padding: 0
+	li
+		margin: 0
+		padding: 0
+		list-style: none
+
+.custom-btn
+	min-height: 55px
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	padding: 0 25px
+	background-color: $c1
+	color: white
+	font-weight: 500
+	font-size: 14px
+	transition: transform .2s, background-color .3s
+	will-change: background-color
+	// transition: .15s opacity
+	&:hover
+		text-decoration: none
+		color: white
+		// opacity: 0.8
+		// background-color: #08c58b
+		// background-color: #3f52af
+		background-color: $c1hover
+		transform: scale(1.1)
+
+=custom-hover
+	transition: .2s transform
+	&:hover
+		transform: scale(1.025)
+		box-shadow: 0 5px 20px rgba(174, 175, 179, 0.3)
+
+=link-base
+	border-bottom: 1px solid $c2text
+	color: $c2text
+	text-decoration: none
+	transition: .05s color, .05s border-color
+	&:hover
+		color: $c1
+		border-color: $c1
