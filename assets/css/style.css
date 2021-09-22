@@ -5926,12 +5926,14 @@ a img.aligncenter {
 .main-footer .id-copy span a{color:#FFFFFF;}
 .main-footer .id-copy span a:hover{color:#FFFFFF; text-decoration:underline;}
 
+/*
 #nf-label-field-82-0 {
   background: #394e6d;
   color: #fff;
   margin-left: 17px;
   padding-left:9px;
 }
+*/
 
 body.blog .archive_header .row .col-md-12 {
   color: #333243;
@@ -6002,4 +6004,3 @@ section.wfea .more-link {
   padding: 5px 10px;
   outline: 1px solid #212529;
 }
-
