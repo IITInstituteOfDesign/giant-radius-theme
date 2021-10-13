@@ -341,3 +341,12 @@ if (class_exists('autoptimizeCache')) {
     }
 }
 
+add_action( 'template_redirect', 'id_redirect_students' );
+
+function id_redirect_students() {
+	if ( is_singular( 'student' ) ) {
+		wp_redirect( '/students', 301 );
+		exit;
+	}
+}
+
