@@ -95,10 +95,13 @@
 			array(
 				'key' => 'this_article_mentions', // name of custom field
 				'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
-				'compare' => 'LIKE'
+				'compare' => 'LIKE',
 			)
-		)
+		),
+		'posts_per_page' => -1,
 	));
+
+
 
 	?>
 	<?php if( $articles ): ?>
